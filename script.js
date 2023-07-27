@@ -57,6 +57,13 @@ newBookForm.onsubmit = function() {
     addBookToLibrary(newBook);
     displayBooks();
     console.log(myLibrary);
+
+    document.getElementById("bookTitle").value = '';
+    document.getElementById("author").value = '';
+    document.getElementById("pages").value = '';
 }
 function handleForm(event) {event.preventDefault(); }
 newBookForm.addEventListener('submit', handleForm);
+
+document.getElementById('newBook').addEventListener('click', ()=>{document.getElementById('newBookForm').style.visibility = 'visible'})
+document.getElementById('hideForm').addEventListener('click', ()=>{document.getElementById('newBookForm').style.visibility = 'hidden'})
